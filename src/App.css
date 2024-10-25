@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+html,
+body,
+label {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.linear-background-hero {
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%),
+    url('https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a') no-repeat;
+}
+
+.carousel-container {
+  width: 700px !important;
+  height: 230px;
+}
+
+.tabs-boxed {
+  background-color: white;
+}
+
+.tabs-boxed :is(.tab-active, [aria-selected="true"]):not(.tab-disabled):not([disabled]),
+.tabs-boxed :is(input:checked) {
+  background-color: #E4F5FF !important;
+  border-radius: 0px;
+}
+
+.tabs-sm :where(.tab) {
+  height: auto;
+  line-height: 1rem;
+}
+
+.thumbnail {
+  cursor: pointer;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+}
+
+.thumbnail:hover {
+  /* width: 200px;
+  height: 200px; */
+  transform: scale(1.5)
+}
+
+/* Scroller animation */
+.scroller {
+  width: 100%;
+}
+.scroller-1 {
+  width: 100%;
+}
+
+.scroll_in {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+}
+.scroller-1[data-animated="true"] {
+  overflow: hidden;
+}
+
+.scroller[data-direction="right"] {
+  --animation-direction: reverse;
+}
+.scroller-1[data-direction="left"] {
+  --animation-direction: reverse;
+}
+
+.scroller[data-animated="true"] .scroll_in {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 140s)
+    var(--animation-direction, forwards) linear infinite;
+}
+scroller[data-speed="normal"] {
+  --_animation-duration: 140s;
+}
+
+.scroller-1[data-animated="true"] .scroll_in {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 60s)
+    var(--animation-direction, forwards) linear infinite;
+}
+scroller-1[data-speed="normal"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+
+/* Slider */
+
+.slick-arrow {
+  display: none;
+}
+
+.slick-next:before {
+  display: none;
+}
+.slick-prev:before {
+  display: none;
+}
+
+.slick-list {
+  z-index: 50;
+  margin: auto;
+}
+.window {
+  overflow-x: hidden;
+}
+.slick-dots {
+  display: hidden;
+}
+
+.testi_slider .slick-track {
+  display: flex;
+  height: 100%;
+}
+
+/* Sticky portion */
+
+.header-button {
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.2s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-button::after {
+  position: absolute;
+  overflow: hidden;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #000000;
+  opacity: 0.1;
+  transition-duration: 0.5s;
+  transition-property: width;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1; /* Ensure it appears on top */
+  border-radius: 25px;
+}
+
+.header-button:hover::after {
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.header-button {
+  z-index: 0; /* Ensure content appears on top of the pseudo-element */
+}
+
+.schedule-btn-gradient {
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.2s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.schedule-btn-gradient:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00e87e;
+  /* opacity: 0.1; */
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.schedule-btn-gradient:hover:after {
+  width: 100%;
+}
+
+.border-gradient-btn {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.2s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.border-gradient-btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-bottom: 2px solid #0231A8;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.border-gradient-btn:hover:after {
+  width: 100%;
+}
+
+.case-study-btn {
+  cursor: pointer;
+
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.case-study-btn:hover .opa {
+  transition: opacity 2s ease-out;
+}
+
+.gradient-bg {
+  @media (max-width: 1024px) {
+    margin-left: 0 !important;
+  }
+}

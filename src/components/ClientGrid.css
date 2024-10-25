@@ -1,0 +1,15 @@
+.carousel {
+    display: flex;
+    transition: transform 1s ease;
+    will-change: transform;
+    width: fit-content;
+  }
+  
+  .carousel-one {
+    transform: translateX(0);
+  }
+  
+  .carousel-two {
+    transform: translateX(0);
+  }
+  
