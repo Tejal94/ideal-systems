@@ -20,15 +20,15 @@ const Navbar = () => {
         </article>
         <SocialMedia />
       </div>
-      <div className="navbar md:justify-around bg-base-100 my-3 bg-white">
-        <div className="flex justify-between px-5 w-full">
+      <div className="navbar md:justify-around my-3 bg-white">
+        <div className="flex justify-between px-0 md:px-5 w-full">
         <a
-            href="#"
-            class="flex items-center space-x-3 rtl:space-x-reverse gap-x-3 ml-2 md:ml-5"
+            href="/home"
+            class="flex items-center space-x-3 rtl:space-x-reverse gap-x-0 md:gap-x-3 ml-0 md:ml-5"
           >
             <img src={Logo} class="h-10 md:h-20 w-10 md:w-20" alt="Logo" />
             <article class="flex items-center flex-col">
-              <span class="self-center text-[20px] font-bold whitespace-nowrap text-[#1A306B] underline underline-offset-2">
+              <span class="self-center text-[19px] md:text-[20px] font-bold whitespace-nowrap text-[#1A306B] underline underline-offset-2">
                 IDEAL SYSTEMS & SERVICES
               </span>
               <span className="text-sm self-center text-[#08A031]">
@@ -55,7 +55,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 bg-white"
+              className="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow rounded-box w-80 md:w-52 bg-white"
             >
               <li>
                 <Link
@@ -79,7 +79,7 @@ const Navbar = () => {
                   {/* Mobile view */}
                   <div className="absolute flex flex-col bg-white">
                     <ul className="m-1">
-                      <h1 className="p-1 mb-1 font-medium text-base">
+                      <h1 className="p-1 mb-2 font-medium text-base">
                         Waste Water Treatment
                       </h1>
                       <li>
@@ -117,7 +117,7 @@ const Navbar = () => {
                       </li>
                     </ul>
                     <ul className="m-1">
-                      <h1 className="p-1 mb-1 font-medium text-base">
+                      <h1 className="p-1 mb-2 font-medium text-base">
                         Water Treatment Plant
                       </h1>
                       <li>

@@ -91,11 +91,11 @@ scroller[data-speed="normal"] {
 .scroller-1[data-animated="true"] .scroll_in {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll var(--_animation-duration, 60s)
+  animation: scroll var(--_animation-duration, 140s)
     var(--animation-direction, forwards) linear infinite;
 }
 scroller-1[data-speed="normal"] {
-  --_animation-duration: 60s;
+  --_animation-duration: 140s;
 }
 
 @keyframes scroll {

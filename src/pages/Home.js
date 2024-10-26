@@ -48,8 +48,8 @@ const Home = () => {
       <TestCarousel />
 
       {/* Reasons to choose us */}
-      <section className="flex px-10 md:px-28 py-10 flex-col">
-        <p className="font-bold text-3xl underline underline-offset-8 text-[#222222]">
+      <section className="flex px-4 md:px-28 py-10 flex-col">
+        <p className="font-bold text-2xl text-center md:text-left md:text-3xl underline underline-offset-8 text-[#222222]">
           REASONS TO CHOOSE US
         </p>
         <div className="flex flex-col md:flex-row gap-x-24 pt-10">
@@ -74,8 +74,8 @@ const Home = () => {
       </section>
 
       {/* Get Quote */}
-      <section className="flex px-10 md:px-28 py-8 flex-col bg-gradient-to-r from-[#E4F5FF] to-[#E4F5FF] gap-y-5 ">
-        <p className="font-bold text-3xl text-center text-[#1A306B]">
+      <section className="flex px-4 md:px-28 py-8 flex-col bg-gradient-to-r from-[#E4F5FF] to-[#E4F5FF] gap-y-5 ">
+        <p className="font-bold text-2xl md:text-3xl text-center text-[#1A306B]">
           Over 12 years of experience & knowledge for providing clean & green
           environment
         </p>
@@ -85,8 +85,8 @@ const Home = () => {
       </section>
 
       {/* Our Speciality */}
-      <section className="flex px-10 md:px-28 mt-16 flex-col">
-        <p className="font-bold text-3xl underline underline-offset-8 text-[#222222]">
+      <section className="flex px-4 md:px-28 mt-16 flex-col">
+        <p className="font-bold text-2xl text-center md:text-left md:text-3xl underline underline-offset-8 text-[#222222]">
           OUR SPECIALITY
         </p>
         <div className="py-5 mt-8 flex flex-col gap-5">
@@ -139,8 +139,8 @@ const Home = () => {
       </section>
 
       {/* Our Customers */}
-      <section className="flex px-10 md:px-20 mt-16 flex-col">
-        <p className="font-bold text-3xl underline underline-offset-8 text-[#222222] mb-16">
+      <section className="flex px-4 md:px-20 mt-16 flex-col">
+        <p className="font-bold text-2xl text-center md:text-left md:text-3xl underline underline-offset-8 text-[#222222] mb-16">
           OUR CUSTOMERS
         </p>
         <ClientGrid2 />

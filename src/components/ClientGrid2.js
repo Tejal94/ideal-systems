@@ -13,13 +13,17 @@ const ClientGrid2 = () => {
                 scroller.setAttribute("data-animated", true);
 
                 const scrollerInner = scroller.querySelector(".scroll_in");
-                const scrollerContent = Array.from(scrollerInner.children);
+                // const scrollerContent = Array.from(scrollerInner.children);
 
-                scrollerContent.forEach((item) => {
-                    const duplicatedItem = item.cloneNode(true);
-                    duplicatedItem.setAttribute("aria-hidden", true);
-                    scrollerInner.appendChild(duplicatedItem);
-                });
+                const contentWidth = scrollerInner.scrollWidth;
+                const animationDuration = contentWidth / 150; // Adjust the divisor as needed
+                scroller.style.setProperty('--_animation-duration', `${animationDuration}s`);
+
+                // scrollerContent.forEach((item) => {
+                //     const duplicatedItem = item.cloneNode(true);
+                //     duplicatedItem.setAttribute("aria-hidden", true);
+                //     scrollerInner.appendChild(duplicatedItem);
+                // });
             });
         };
 
@@ -49,15 +53,15 @@ const ClientGrid2 = () => {
     }, []);
 
     return (
-        <div className="w-[96%] ml-[2%] p-4">
+        <div className="w-full md:w-[96%] ml-0 md:ml-[2%] p-2 md:p-4">
 
-            <div className={`flex  items-center gap-6 scroller overflow-hidden`}>
-                <div className="scroll_in">
+            <div className={`flex items-center gap-2 md:gap-6 scroller overflow-hidden`}>
+                <div className="scroll_in"> 
                 {ourCustomersImagesOne &&
           ourCustomersImagesOne.map((img, index) => (
-                    <div key={index} className="w-72 h-60 pt-8 mx-4 rounded-xl flex-shrink-0 shadow-md shadow-[rgba(2, 49, 168, 0.15)] items-center justify-center bg-white">
+                    <div key={index} className="w-52 h-40 md:w-72 md:h-60 pt-2 md:pt-2 mx-4 rounded-xl flex-shrink-0 shadow-md shadow-[rgba(2, 49, 168, 0.15)] items-center justify-center bg-white">
                         
-                        <div className="h-full flex items-center justify-center">
+                        <div className="h-full scale-75 md:scale-100 flex items-center justify-center">
             
                              <img src={img} />
                         </div>
@@ -68,13 +72,13 @@ const ClientGrid2 = () => {
             </div>
 
 
-            <div className={`flex items-center gap-6 mt-4 scroller-1 overflow-hidden`} data-direction="left">
+            <div className={`flex items-center gap-2 md:gap-6 mt-4 scroller-1 overflow-hidden`} data-direction="left">
                 <div className="scroll_in">
                 {ourCustomersImagesTwo &&
           ourCustomersImagesTwo.map((img, index) => (
-                    <div key={index} className="w-72 h-60 pt-8 mx-4 rounded-xl flex-shrink-0 shadow-md shadow-[rgba(2, 49, 168, 0.15)] items-center justify-center bg-white">
+                    <div key={index} className="w-52 h-40 md:w-72 md:h-60 pt-2 md:pt-2 mx-4 rounded-xl flex-shrink-0 shadow-md shadow-[rgba(2, 49, 168, 0.15)] items-center justify-center bg-white">
                         
-                        <div className="h-full flex items-center justify-center">
+                        <div className="h-full scale-75 md:scale-100 flex items-center justify-center">
             
                              <img src={img} />
                         </div>

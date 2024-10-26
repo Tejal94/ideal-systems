@@ -64,10 +64,10 @@ const About = () => {
         <div data-aos="fade-left"
                   data-aos-duration="2000" className="flex flex-col flex-1 justify-center items-center shadow-2xl shadow-[rgba(2, 49, 168, 0.15)] rounded-[10px] bg-[#ECF8FF] gap-y-4 p-4">
           <img src={Logo} class="h-28 md:h-40 w-28 md:w-40" alt="Logo" />
-          <span class="self-center text-[24px] md:text-[28px] font-bold whitespace-nowrap text-[#1A306B] underline underline-offset-2">
+          <span class="self-center text-xl md:text-[28px] font-bold whitespace-nowrap text-[#1A306B] underline underline-offset-2">
             IDEAL SYSTEMS & SERVICES
           </span>
-          <span className="text-[24px] self-center text-[#08A031]">
+          <span className="text-lg md:text-[24px] self-center text-[#08A031]">
             Green & Clean Solution
           </span>
         </div>
@@ -108,8 +108,8 @@ const About = () => {
       </section>
 
       {/* Leader and Team */}
-      <section className="flex px-10 md:px-28 mt-16 flex-col">
-        <p className="font-bold text-3xl underline underline-offset-8 text-[#222222]">
+      <section className="flex px-4 md:px-28 mt-16 flex-col">
+        <p className="font-bold text-2xl md:text-3xl text-center md:text-left underline underline-offset-8 text-[#222222]">
           MEET THE LEADERS & TEAM
         </p>
         <div className="py-10 grid grid-cols-1 md:grid-cols-4 gap-5">
@@ -143,7 +143,7 @@ const About = () => {
 
       {/* Accreditation */}
       <section className="flex px-10 md:px-28 py-10 flex-col">
-        <p className="font-bold text-3xl underline underline-offset-8 text-[#222222]">
+        <p className="font-bold text-2xl md:text-3xl text-center md:text-left underline underline-offset-8 text-[#222222]">
           ACCREDITATION
         </p>
         <div class="grid grid-rows-3 grid-cols-3 gap-4 items-center">
