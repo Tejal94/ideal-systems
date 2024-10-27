@@ -8,7 +8,7 @@ const Contacts = () => {
     <div>
       <Navbar />
       {/* Hero Banner */}
-      <section class="bg-[url('./assets/banner/banner-contact.svg')] h-[403px] w-full bg-center p-10">
+      <section class="bg-[url('./assets/banner/ContactMobile.svg')] sm:bg-[url('./assets/banner/banner-contact.svg')] h-[403px] w-full bg-center p-10">
         <nav class="w-full rounded-md">
           <ol class="list-reset flex">
             <li>
@@ -26,7 +26,7 @@ const Contacts = () => {
           </ol>
         </nav>
       </section>
-      <section className="flex px-10 md:px-20 py-10 flex-col">
+      <section className="flex px-10 md:px-20 2xl:px-36 py-10 flex-col 2xl:mt-20">
         <ContactForm />
       </section>
       <Footer />

@@ -35,7 +35,18 @@ const ModalForm = ({setShowForm}) => {
       };
     
       const submitToGoogleSheet = async () => {
-        const url = "https://script.google.com/macros/s/AKfycbxgjzI48aj6QEmHBZHxI76QsCUnS32ulfNi1ZOQNPXbUdZmjUDxyRc-SnzzoPPtib5UHQ/exec"; // Replace with the Web app URL from Apps Script
+        const today = new Date();
+        const formattedDate = `${String(today.getDate()).padStart(2, '0')}/${String(today.getMonth() + 1).padStart(2, '0')}/${today.getFullYear()}`;
+      
+        const formattedTime = `${String(today.getHours()).padStart(2, '0')}:${String(today.getMinutes()).padStart(2, '0')}`;
+      
+        const updatedFormData = {
+          ...formData,
+          date: formattedDate,
+          time: formattedTime,
+        };
+        console.log(updatedFormData)
+        const url = "https://script.google.com/macros/s/AKfycbxgjzI48aj6QEmHBZHxI76QsCUnS32ulfNi1ZOQNPXbUdZmjUDxyRc-SnzzoPPtib5UHQ/exec";
         try {
           const response = await fetch(url, {
             method: "POST",
@@ -43,7 +54,7 @@ const ModalForm = ({setShowForm}) => {
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify(formData),
+            body: JSON.stringify(updatedFormData),
           });
           console.log("Response:", response);
           if (response.ok) {
@@ -68,7 +79,7 @@ const ModalForm = ({setShowForm}) => {
         if (Object.keys(formErrors).length === 0) {
           console.log(formData);
           submitToGoogleSheet();
-          toast.success('Enquiry submitted successfully!');
+          toast.success('Enquiry submitted successfully! We will reach out to you soon.');
           setTimeout(() => {
             setShowForm(false);
           }, 2000)

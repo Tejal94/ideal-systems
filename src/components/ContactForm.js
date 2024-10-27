@@ -34,6 +34,16 @@ const ContactForm = () => {
   };
 
   const submitToGoogleSheet = async () => {
+    const today = new Date();
+  const formattedDate = `${String(today.getDate()).padStart(2, '0')}/${String(today.getMonth() + 1).padStart(2, '0')}/${today.getFullYear()}`;
+
+  const formattedTime = `${String(today.getHours()).padStart(2, '0')}:${String(today.getMinutes()).padStart(2, '0')}`;
+
+  const updatedFormData = {
+    ...formData,
+    date: formattedDate,
+    time: formattedTime,
+  };
     const url = "https://script.google.com/macros/s/AKfycbxgjzI48aj6QEmHBZHxI76QsCUnS32ulfNi1ZOQNPXbUdZmjUDxyRc-SnzzoPPtib5UHQ/exec"; // Replace with the Web app URL from Apps Script
     try {
       const response = await fetch(url, {
@@ -42,7 +52,7 @@ const ContactForm = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(updatedFormData),
       });
       console.log("Response:", response);
       if (response.ok) {
@@ -67,7 +77,7 @@ const ContactForm = () => {
     if (Object.keys(formErrors).length === 0) {
       console.log(formData);
       submitToGoogleSheet();
-      toast.success('Enquiry submitted successfully!');
+      toast.success('Enquiry submitted successfully! We will reach out to you soon.');
       // Submit the form data
     } else {
       setErrors(formErrors);
@@ -78,10 +88,10 @@ const ContactForm = () => {
     <div>
       <Toaster/>
       <article className="flex flex-col md:flex-row justify-around gap-y-5 gap-x-10">
-        <p className="font-bold text-3xl underline underline-offset-8 text-[#222222] flex-2">
+        <p className="font-bold text-3xl 2xl:text-4xl underline underline-offset-8 text-[#222222] flex-2">
           TELL US WHAT YOU LOOKING FOR
         </p>
-        <p className="flex flex-1 font-normal text-[20px] leading-[30px] text-[#39345A]">
+        <p className="flex flex-1 font-normal text-[20px] 2xl:text-[22px] 2xl:pl-16 leading-[30px] text-[#39345A]">
           We are the world class engineering manufacturer providing the highest
           quality products, services and solutions to our customers.
         </p>
@@ -91,10 +101,10 @@ const ContactForm = () => {
           <div className="flex flex-row">
             <img src={PhoneIcon} alt="rtc1" className="h-6 w-6 self-center" />
             <article className="flex flex-col pl-5 text-wrap justify-evenly">
-              <p className="font-medium text-lg text-[#2B2F3E]">
+              <p className="font-medium text-lg 2xl:text-[22px] text-[#2B2F3E]">
                 Contact Number
               </p>
-              <p className="font-normal text-lg text-[#1A306B]">
+              <p className="font-normal text-lg 2xl:text-[22px] text-[#1A306B]">
                 + 91 9665134392, + 91 9890805654
               </p>
             </article>
@@ -102,10 +112,10 @@ const ContactForm = () => {
           <div className="flex flex-row">
             <img src={EmailIcon} alt="rtc1" className="h-6 w-6 self-center" />
             <article className="flex flex-col pl-5 text-wrap justify-evenly">
-              <p className="font-medium text-lg text-[#2B2F3E]">
+              <p className="font-medium text-lg 2xl:text-[22px] text-[#2B2F3E]">
                 Send us an e-mail.
               </p>
-              <p className="font-normal text-lg text-[#1A306B]">
+              <p className="font-normal text-lg 2xl:text-[22px] text-[#1A306B]">
                 Info@idealsystems.co.in
               </p>
             </article>
@@ -113,10 +123,10 @@ const ContactForm = () => {
           <div className="flex flex-row">
             <img src={ClockIcon} alt="rtc1" className="h-6 w-6 self-center" />
             <article className="flex flex-col pl-5 text-wrap justify-evenly">
-              <p className="font-medium text-lg text-[#2B2F3E]">
+              <p className="font-medium text-lg 2xl:text-[22px] text-[#2B2F3E]">
                 Working Hours
               </p>
-              <p className="font-normal text-lg text-[#1A306B]">
+              <p className="font-normal text-lg 2xl:text-[22px] text-[#1A306B]">
                 Mon - Sat: 9:00 - 19:00
               </p>
             </article>
@@ -124,14 +134,14 @@ const ContactForm = () => {
           <div className="flex mt-2 flex-row">
             <img src={MapIcon} alt="rtc1" className="h-6 w-6 self-center" />
             <article className="flex flex-col pl-5 text-wrap justify-evenly">
-              <p className="font-medium text-md text-[#0231A8] border-gradient-btn md:text-[20px]">
+              <p className="font-medium text-md 2xl:text-[22px] text-[#0231A8] border-gradient-btn md:text-[20px]">
                 Find Us on Map
               </p>
             </article>
           </div>
         </div>
         <div className="flex flex-1 flex-col gap-y-6">
-          <form className="px-6 md:px-10" onSubmit={handleForm}>
+          <form className="px-6 md:px-10 2xl:pl-52" onSubmit={handleForm}>
             <div>
               <input
                 className="border rounded w-full py-2 px-3 mb-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"

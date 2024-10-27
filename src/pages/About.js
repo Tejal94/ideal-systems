@@ -47,8 +47,8 @@ const About = () => {
       </section>
 
       {/* About */}
-      <section className="flex px-10 md:px-28 my-16 flex-col-reverse md:flex-row gap-y-10 gap-x-10">
-        <article className="flex flex-[1.5_1.5_0%] flex-col gap-y-10" data-aos="fade-right"
+      <section className="flex px-10 md:px-28 2xl:px-36 my-16 flex-col-reverse md:flex-row gap-y-10 gap-x-10">
+        <article className="flex flex-[1.5_1.5_0%] flex-col gap-y-10 2xl:pr-10" data-aos="fade-right"
                   data-aos-duration="2000">
           <span className="font-normal text-xl text-justify leading-7 capitalize">
             Established in 2012 in Pune, Maharashtra, India, we are a manufacturer, wholesaler, and retailer specializing in sewage treatment plants,
@@ -74,14 +74,14 @@ const About = () => {
       </section>
 
       {/* Our Vision and Mission */}
-      <section className="flex px-10 md:px-28 py-8 flex-col bg-gradient-to-r from-[#E4F5FF] to-[#E4F5FF] gap-y-5 ">
+      <section className="flex px-10 md:px-28 2xl:px-36 py-8 flex-col bg-gradient-to-r from-[#E4F5FF] to-[#E4F5FF] gap-y-5 ">
         <article data-aos="fade-right"
-                  data-aos-duration="2000" className="flex flex-col shadow-2xl shadow-[rgba(2, 49, 168, 0.15)] rounded-[2px] justify-center bg-white p-8 gap-y-3">
-          <div className="flex flex-row gap-x-5 items-center">
+                  data-aos-duration="2000" className="flex flex-col shadow-2xl shadow-[rgba(2, 49, 168, 0.15)] rounded-[2px] justify-center bg-white p-8 lg:p-12 2xl:p-20 gap-y-3">
+          <div className="flex flex-row gap-x-5 md:mb-4 2xl:mb-8 items-center">
             <img src={IconVision} className="h-16 w-20" alt="icon" />
-            <span className="font-semibold text-[32px] text-[#1E1E1E]">OUR VISION</span>
+            <span className="font-semibold text-[32px] 2xl:text-4xl text-[#1E1E1E]">OUR VISION</span>
           </div>
-          <span className="font-medium text-base text-[#2B2F3E] text-justify capitalize">
+          <span className="font-medium text-base md:text-lg 2xl:text-xl text-[#2B2F3E] text-justify capitalize">
             Company's aim is to make a positive impact on society and the environment by implementing projects that are not
             only sustainable but also integrated, meaning they consider various aspects and stakeholders. This approach ensures
             that your projects not only benefit the environment but also have a positive impact on people's lives, such as
@@ -91,12 +91,12 @@ const About = () => {
           </span>
         </article>
         <article data-aos="fade-left"
-                  data-aos-duration="2000" className="flex flex-col shadow-2xl shadow-[rgba(2, 49, 168, 0.15)] rounded-[2px] justify-center bg-white p-8 gap-y-3">
-          <div className="flex flex-row gap-x-5 items-center justify-end">
-            <span className="font-semibold text-[32px] text-[#1E1E1E]">OUR MISSION</span>
-            <img src={IconMission} className="h-16 w-20" alt="icon" />
+                  data-aos-duration="2000" className="flex flex-col shadow-2xl shadow-[rgba(2, 49, 168, 0.15)] rounded-[2px] justify-center bg-white p-8 lg:p-12 2xl:p-20 gap-y-3">
+          <div className="flex flex-row gap-x-5 md:mb-4 2xl:mb-8 items-center justify-end">
+            <span className="font-semibold text-[32px] 2xl:text-4xl text-[#1E1E1E]">OUR MISSION</span>
+            <img src={IconMission} className="h-16 w-20 " alt="icon" />
           </div>
-          <span className="font-medium text-base text-[#2B2F3E] text-justify capitalize">
+          <span className="font-medium text-base md:text-lg 2xl:text-xl  text-[#2B2F3E] text-justify capitalize">
             Company focuses on creating a multidisciplinary approach, which means that you involve experts from various fields such as engineering,
             environmental science, economics, and social sciences. This approach allows you to consider different perspectives and expertise, ensuring
             that your projects are comprehensive and well-rounded. By striking the right balance between innovation and tradition, you aim to leverage
@@ -108,8 +108,8 @@ const About = () => {
       </section>
 
       {/* Leader and Team */}
-      <section className="flex px-4 md:px-28 mt-16 flex-col">
-        <p className="font-bold text-2xl md:text-3xl text-center md:text-left underline underline-offset-8 text-[#222222]">
+      <section className="flex px-4 md:px-28 2xl:px-36 mt-16 flex-col">
+        <p className="font-bold text-2xl md:text-3xl 2xl:text-4xl text-center md:text-left underline underline-offset-8 text-[#222222]">
           MEET THE LEADERS & TEAM
         </p>
         <div className="py-10 grid grid-cols-1 md:grid-cols-4 gap-5">
@@ -142,8 +142,8 @@ const About = () => {
       </section>
 
       {/* Accreditation */}
-      <section className="flex px-10 md:px-28 py-10 flex-col">
-        <p className="font-bold text-2xl md:text-3xl text-center md:text-left underline underline-offset-8 text-[#222222]">
+      <section className="flex px-10 md:px-28 2xl:px-36 py-10 flex-col">
+        <p className="font-bold text-2xl md:text-3xl 2xl:text-4xl text-center md:text-left underline underline-offset-8 text-[#222222]">
           ACCREDITATION
         </p>
         <div class="grid grid-rows-3 grid-cols-3 gap-4 items-center">

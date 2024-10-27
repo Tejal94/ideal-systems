@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <footer className="mt-16">
-      <article className="flex flex-col md:flex-row px-10 md:px-20 py-14 bg-gradient-to-r from-[#E4F5FF] to-[#E4F5FF] gap-x-1 md:gap-x-14 justify-center mb-5">
+      <article className="flex flex-col md:flex-row px-10 md:px-20 2xl:px-36 py-14 bg-gradient-to-r from-[#E4F5FF] to-[#E4F5FF] gap-x-1 md:gap-x-14 justify-center mb-5">
         <p className="font-bold text-2xl md:text-3xl text-[#1A306B]">
           Want to consult with our team
         </p>
@@ -19,7 +19,7 @@ const Footer = () => {
           Contact Us
         </button>
       </article>
-      <article className="flex px-5 md:px-12 py-8 flex-col bg-gradient-to-r from-[#E4F5FF] to-[#E4F5FF] gap-y-5 divide-y-4">
+      <article className="flex px-5 md:px-12 2xl:px-36 py-8 flex-col bg-gradient-to-r from-[#E4F5FF] to-[#E4F5FF] gap-y-5 divide-y-4">
         <div class="px-4 grid grid-flow-row-dense grid-cols-1 md:grid-cols-3 grid-rows-1 md:divide-x divide-slate-700 gap-y-5">
           <div className="col-span-2 md:pr-10">
             <div className="flex flex-row justify-center">

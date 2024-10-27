@@ -85,7 +85,7 @@ const Navbar = () => {
                       <li>
                         <Link
                           to={{
-                            pathname: `/product`,
+                            pathname: `/products`,
                             search: `?tab=STP`,  
                           }}
                           className="px-1 font-normal text-sm text-black rounded"
@@ -289,7 +289,7 @@ const Navbar = () => {
                       <Link
                         to={{
                           pathname: `/products`,
-                          search: `?tab=UTP`,  
+                          search: `?tab=UFP`,  
                         }}
                         className="px-1 font-normal text-sm text-black rounded"
                       >

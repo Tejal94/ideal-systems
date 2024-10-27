@@ -6,6 +6,8 @@ import WaterSofteningPlant from "../components/plants/WaterSofteningPlant";
 import ReverseOsmosisPlant from "../components/plants/ReverseOsmosisPlant";
 import DemineralizationPlant from "../components/plants/DemineralizationPlant";
 import SewageTreatmentPlant from "../components/plants/SewageTreatmentPlant";
+import UltraFilteration from "../components/plants/UltraFilteration";
+import RainWaterHarvesting from "../components/plants/RainWaterHarvesting";
 import { useSearchParams } from "react-router-dom";
 
 const Products = () => {
@@ -20,11 +22,13 @@ const Products = () => {
       <section class="bg-[url('./assets/banner/banner-aboutus.svg')] h-[438px] w-full bg-cover bg-center p-20" />
 
       {/* Title and About */}
+      {tab === "STP" && <SewageTreatmentPlant />}
       {tab === "ETP" && <PlantsDataComp/>}
       {tab === "WSP" && <WaterSofteningPlant/>}
       {tab === "ROP" && <ReverseOsmosisPlant/>}
       {tab === "DP" &&<DemineralizationPlant/>}
-     {tab === "STP" && <SewageTreatmentPlant />}
+      {tab === "UFP" && <UltraFilteration />}
+      {tab === "RWH" && <RainWaterHarvesting />}
 
       <Footer />
     </div>

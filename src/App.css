@@ -171,6 +171,41 @@ scroller-1[data-speed="normal"] {
   z-index: 0; /* Ensure content appears on top of the pseudo-element */
 }
 
+.header-button1 {
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.2s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-button1::after {
+  position: absolute;
+  overflow: hidden;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #000000;
+  opacity: 0.1;
+  transition-duration: 0.5s;
+  transition-property: width;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1; /* Ensure it appears on top */
+  border-radius: 5px;
+}
+
+.header-button1:hover::after {
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.header-button1 {
+  z-index: 0; /* Ensure content appears on top of the pseudo-element */
+}
+
 .schedule-btn-gradient {
   position: relative;
   overflow: hidden;
