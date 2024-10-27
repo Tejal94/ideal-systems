@@ -1,15 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tab";
 import ModalForm from "../../components/ModalForm";
 import { Dialog, DialogContent } from "../ui/dialog";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const DemineralizationPlant = () => {
 
   const [showForm, setShowForm] = useState(false);
 
+  useEffect(() => {
+    AOS.init({ once: true, duration: 2500, overflow: "hidden" });
+  }, []);
+
   return (
     <div className="w-full px-2 md:px-2 lg:px-28 mt-16">
-      <section className="">
+      <section className="" data-aos="fade-right"
+                  data-aos-duration="2000">
         <p className="font-bold text-3xl uppercase underline underline-offset-8 text-[#222222] mb-16">
           Demineralization Plant
         </p>
@@ -143,10 +150,12 @@ const DemineralizationPlant = () => {
         </Tabs>
       </main>
 
-      <p className="font-bold text-3xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10">
+      <p className="font-bold text-3xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10" data-aos="fade-right"
+                  data-aos-duration="2000">
         Benefits
       </p>
-      <ul className="list-disc list-outside pl-5 text-2xl font-normal">
+      <ul className="list-disc list-outside pl-5 text-2xl font-normal" data-aos="fade-right"
+                  data-aos-duration="2000">
         <li>Removes Mineral Salts</li>
         <li>Prevents Scaling</li>
         <li>Improves Efficiency</li>

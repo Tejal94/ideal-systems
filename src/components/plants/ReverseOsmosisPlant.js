@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tab";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/autoplay";
@@ -13,17 +13,24 @@ import RO1 from "../../assets/plants/RO1.svg";
 import RO2 from "../../assets/plants/ro2.svg";
 import ModalForm from "../../components/ModalForm";
 import { Dialog, DialogContent } from "../ui/dialog";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ReverseOsmosisPlant = () => {
   const [showForm, setShowForm] = useState(false);
 
+  useEffect(() => {
+    AOS.init({ once: true, duration: 2500, overflow: "hidden" });
+  }, []);
+
   return (
-    <div className="w-full px-2 md:px-2 lg:px-28 mt-16">
-      <section className="">
-        <p className="font-bold text-3xl uppercase underline underline-offset-8 text-[#222222] mb-16">
+    <div className="w-full px-2 md:px-2 lg:px-28 2xl:px-36 mt-16">
+      <section className="" data-aos="fade-right"
+                  data-aos-duration="2000">
+        <p className="font-bold text-3xl 2xl:text-4xl uppercase underline underline-offset-8 text-[#222222] mb-16">
           Reverse Osmosis Plant
         </p>
-        <span className="font-normal text-xl text-justify leading-7 capitalize">
+        <span className="font-normal text-xl 2xl:text-[22px] text-justify leading-7 capitalize">
           A Reverse Osmosis (RO) plant from WTE is designed to remove dissolved
           solids from water. This technology is used in many industries and
           homes for water purification. The unit includes various components
@@ -31,7 +38,7 @@ const ReverseOsmosisPlant = () => {
           biological growth, as well as chemicals to remove chlorine and solid
           particles. This ensures high performance and reliability.
         </span>
-        <p className="font-normal text-xl text-justify mt-8 leading-7 capitalize">
+        <p className="font-normal text-xl 2xl:text-[22px] text-justify mt-8 leading-7 capitalize">
           With more than twelve years of experience, we're pioneers in our
           field. We're constantly seeking the latest, most cost-effective
           technologies to meet society's needs effortlessly.
@@ -42,21 +49,21 @@ const ReverseOsmosisPlant = () => {
         <Tabs defaultValue="The Process">
           <TabsList className="h-16 w-full justify-between mb-12">
             <TabsTrigger
-              className="disabled:opacity-100 disabled:data-[state=active]:bg-[#E4F5FF] text-wrap md:text-nowrap text-black w-1/3 py-2 disabled:data-[state=active]:text-primary-500"
+              className="disabled:opacity-100 2xl:text-xl disabled:data-[state=active]:bg-[#E4F5FF] text-wrap md:text-nowrap text-black w-1/3 py-2 disabled:data-[state=active]:text-primary-500"
               value="The Process"
             >
               Commercial/Institutional RO Plant
             </TabsTrigger>
 
             <TabsTrigger
-              className="disabled:opacity-100 disabled:data-[state=active]:border-b-primary-500 text-black w-1/3 py-2 disabled:data-[state=active]:text-primary-500"
+              className="disabled:opacity-100 2xl:text-xl disabled:data-[state=active]:border-b-primary-500 text-black w-1/3 py-2 disabled:data-[state=active]:text-primary-500"
               value="Features"
             >
               Features
             </TabsTrigger>
 
             <TabsTrigger
-              className="disabled:opacity-100 disabled:data-[state=active]:border-b-primary-500 text-black w-1/3 py-2 disabled:data-[state=active]:text-primary-500"
+              className="disabled:opacity-100 2xl:text-xl disabled:data-[state=active]:border-b-primary-500 text-black w-1/3 py-2 disabled:data-[state=active]:text-primary-500"
               value="Application"
             >
               Application
@@ -64,7 +71,7 @@ const ReverseOsmosisPlant = () => {
           </TabsList>
 
           <TabsContent className="relative flex flex-col " value="The Process">
-            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg py-10 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
+            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg 2xl:text-xl py-10 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
               <ul className="list-disc list-outside pl-5">
                 <li>
                   Purpose: A Commercial/Institutional RO plant is designed to
@@ -99,7 +106,7 @@ const ReverseOsmosisPlant = () => {
             className="flex flex-col scrollbar-thin scrollbar-thumb-gray-200 scrollbar-thumb-rounded-lg"
             value="Features"
           >
-            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg  py-10 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
+            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg 2xl:text-xl py-10 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
               <ul className="list-disc list-outside pl-5">
                 <li>Product and Reject Flow Meters</li>
                 <li>Low & High pressure switch</li>
@@ -126,7 +133,7 @@ const ReverseOsmosisPlant = () => {
             className="flex flex-col scrollbar-thin scrollbar-thumb-gray-200 scrollbar-thumb-rounded-lg"
             value="Application"
           >
-            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg py-10 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
+            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg 2xl:text-xl py-10 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
               <ul className="list-disc list-outside pl-5">
                 <li>Industrial Facilities</li>
                 <li>Commercial Buildings</li>
@@ -148,9 +155,10 @@ const ReverseOsmosisPlant = () => {
         </Tabs>
       </main>
 
-      <div className="flex flex-col sm:flex-row p-2 md:p-0">
+      <div className="flex flex-col sm:flex-row p-2 md:p-0 2xl:mt-5">
         <section className="w-full md:w-1/2">
-          <p className="font-bold text-3xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10">
+          <p data-aos="fade-right"
+                  data-aos-duration="2000" className="font-bold text-3xl 2xl:text-4xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10">
             Gallery
           </p>
 
@@ -175,8 +183,9 @@ const ReverseOsmosisPlant = () => {
             </Swiper>
           </div>
         </section>
-        <section className="w-full md:w-1/2 md:pl-16">
-          <p className="font-bold text-3xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10">
+        <section className="w-full md:w-1/2 md:pl-16" data-aos="fade-right"
+                  data-aos-duration="2000">
+          <p className="font-bold text-3xl 2xl:text-4xl 2xl:pl-10 uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10">
             Benefits
           </p>
           <ul className="list-disc list-outside pl-5 text-2xl font-normal">
