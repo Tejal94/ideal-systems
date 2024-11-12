@@ -15,7 +15,7 @@ const Footer = () => {
         <p className="font-bold text-2xl md:text-3xl text-[#1A306B]">
           Want to consult with our team
         </p>
-        <button onClick={() => setShowForm(true)} className="bg-[#0231A8] mt-4 md:mt-0 w-48 p-2 rounded-full self-center text-white header-button px-6 py-2.5 font-semibold text-center">
+        <button onClick={() => setShowForm(true)} className="bg-[#0231A8] mt-4 md:mt-0 w-48 p-2 rounded-lg self-center text-white header-button px-6 py-2.5 font-semibold text-center">
           Contact Us
         </button>
       </article>

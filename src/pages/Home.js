@@ -77,7 +77,7 @@ const Home = () => {
           Over 12 years of experience & knowledge for providing clean & green
           environment
         </p>
-        <button onClick={() => setShowForm(true)} className="bg-[#0231A8] w-48 p-2 rounded-full self-center text-white header-button hidden md:block px-6 py-2.5 font-semibold text-center">
+        <button onClick={() => setShowForm(true)} className="bg-[#0231A8] w-48 p-2 rounded-lg self-center text-white header-button hidden md:block px-6 py-2.5 font-semibold text-center">
           Get A Quote
         </button>
       </section>

@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useRef }  from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 import SocialMedia from "../components/SocialMedia";
 import PhoneIcon from "../assets/icons/phone.svg";
 
 const Navbar = () => {
+  const dropdownRef = useRef(null);
+
+  const closeDropdown = () => {
+    if (dropdownRef.current) {
+      dropdownRef.current.open = false;
+    }
+  };
+  
   return (
     <>
       <div className="bg-[#E4F5FF] hidden md:flex flex-wrap items-center justify-around p-4 h-[60px] gap-y-2">
@@ -74,7 +82,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <details className="z-[9] bg-white">
+                <details ref={dropdownRef} className="z-[9] bg-white">
                   <summary className="p-2 rounded">PRODUCTS & SERVICES</summary>
                   {/* Mobile view */}
                   <div className="absolute flex flex-col bg-white">
@@ -88,6 +96,7 @@ const Navbar = () => {
                             pathname: `/products`,
                             search: `?tab=STP`,  
                           }}
+                          onClick={closeDropdown}
                           className="px-1 font-normal text-sm text-black rounded"
                         >
                           Sewage Treatment Plant
@@ -99,6 +108,7 @@ const Navbar = () => {
                             pathname: `/products`,
                             search: `?tab=ETP`,  
                           }}
+                          onClick={closeDropdown}
                           className="px-1 font-normal text-sm text-black rounded"
                         >
                           Effluent Treatment Plant
@@ -110,6 +120,7 @@ const Navbar = () => {
                             pathname: `/products`,
                             search: `?tab=RWH`,  
                           }}
+                          onClick={closeDropdown}
                           className="px-1 font-normal text-sm text-black rounded"
                         >
                           Rain Water Harvesting
@@ -126,6 +137,7 @@ const Navbar = () => {
                             pathname: `/products`,
                             search: `?tab=UFP`,  
                           }}
+                          onClick={closeDropdown}
                           className="px-1 font-normal text-sm text-black rounded"
                         >
                           Ultra Filtration Plant
@@ -137,6 +149,7 @@ const Navbar = () => {
                             pathname: `/products`,
                             search: `?tab=WSP`,  
                           }}
+                          onClick={closeDropdown}
                           className="px-1 font-normal text-sm text-black rounded"
                         >
                           Water Softening Plant
@@ -148,6 +161,7 @@ const Navbar = () => {
                             pathname: `/products`,
                             search: `?tab=DP`,  
                           }}
+                          onClick={closeDropdown}
                           className="px-1 font-normal text-sm text-black rounded"
                         >
                           Demineralization Plant
@@ -159,6 +173,7 @@ const Navbar = () => {
                             pathname: `/products`,
                             search: `?tab=ROP`,  
                           }}
+                          onClick={closeDropdown}
                           className="px-1 font-normal text-sm text-black rounded"
                         >
                           Reverse Osmosis Plant
@@ -171,7 +186,11 @@ const Navbar = () => {
                       </h1>
                       <li>
                         <Link
-                          to=""
+                          to={{
+                            pathname: `/services`,
+                            search: `?tab=AMS`,  
+                          }}
+                          onClick={closeDropdown}
                           className="px-1 font-normal text-sm text-black rounded"
                         >
                           Annual Maintenance service
@@ -179,7 +198,11 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          to=""
+                          to={{
+                            pathname: `/services`,
+                            search: `?tab=PIS`,  
+                          }}
+                          onClick={closeDropdown}
                           className="px-1 font-normal text-sm text-black rounded"
                         >
                           Plants Installation Service
@@ -187,7 +210,11 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          to=""
+                          to={{
+                            pathname: `/services`,
+                            search: `?tab=ECS`,  
+                          }}
+                          onClick={closeDropdown}
                           className="px-1 font-normal text-sm text-black rounded"
                         >
                           Erection Commissioning Service
@@ -241,7 +268,7 @@ const Navbar = () => {
             </li>
             
             <li>
-              <details className="z-[9]">
+              <details className="z-[9]" ref={dropdownRef}>
                 <summary className="p-2 rounded">PRODUCTS & SERVICES</summary>
                 <div className="absolute flex flex-row bg-white py-4">
                   <ul className="m-1">
@@ -253,7 +280,7 @@ const Navbar = () => {
                           to={{
                             pathname: `/products`,
                             search: `?tab=STP`,  
-                          }} className="px-1 font-normal text-sm text-black rounded"
+                          }} onClick={closeDropdown} className="px-1 font-normal text-sm text-black rounded"
                       >
                         Sewage Treatment Plant
                       </Link>
@@ -264,6 +291,7 @@ const Navbar = () => {
                           pathname: `/products`,
                           search: `?tab=ETP`,  
                         }}
+                        onClick={closeDropdown}
                         className="px-1 font-normal text-sm text-black rounded"
                       >
                         Effluent Treatment Plant
@@ -275,6 +303,7 @@ const Navbar = () => {
                           pathname: `/products`,
                           search: `?tab=RWH`,  
                         }}
+                        onClick={closeDropdown}
                         className="px-1 font-normal text-sm text-black rounded"
                       >
                         Rain Water Harvesting
@@ -291,6 +320,7 @@ const Navbar = () => {
                           pathname: `/products`,
                           search: `?tab=UFP`,  
                         }}
+                        onClick={closeDropdown}
                         className="px-1 font-normal text-sm text-black rounded"
                       >
                         Ultra Filtration Plant
@@ -302,6 +332,7 @@ const Navbar = () => {
                           pathname: `/products`,
                           search: `?tab=WSP`,  
                         }}
+                        onClick={closeDropdown}
                         className="px-1 font-normal text-sm text-black rounded"
                       >
                         Water Softening Plant
@@ -313,6 +344,7 @@ const Navbar = () => {
                           pathname: `/products`,
                           search: `?tab=DP`,  
                         }}
+                        onClick={closeDropdown}
                         className="px-1 font-normal text-sm text-black rounded"
                       >
                         Demineralization Plant
@@ -324,6 +356,7 @@ const Navbar = () => {
                           pathname: `/products`,
                           search: `?tab=ROP`,  
                         }}
+                        onClick={closeDropdown}
                         className="px-1 font-normal text-sm text-black rounded"
                       >
                         Reverse Osmosis Plant
@@ -334,7 +367,11 @@ const Navbar = () => {
                     <h1 className="p-1 mb-1 font-medium text-base">Services</h1>
                     <li>
                       <Link
-                        to=""
+                        to={{
+                          pathname: `/services`,
+                          search: `?tab=AMS`,  
+                        }}
+                        onClick={closeDropdown}
                         className="px-1 font-normal md:text-nowrap text-sm text-black rounded"
                       >
                         Annual Maintenance service
@@ -342,7 +379,11 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link
-                        to=""
+                        to={{
+                          pathname: `/services`,
+                          search: `?tab=PIS`,  
+                        }}
+                        onClick={closeDropdown}
                         className="px-1 font-normal text-sm text-black rounded"
                       >
                         Plants Installation Service
@@ -350,7 +391,11 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link
-                        to=""
+                        to={{
+                          pathname: `/services`,
+                          search: `?tab=ECS`,  
+                        }}
+                        onClick={closeDropdown}
                         className="px-1 font-normal text-sm text-black rounded"
                       >
                         Erection Commissioning Service

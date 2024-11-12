@@ -197,7 +197,7 @@ const ContactForm = () => {
               />
               {errors.comments && <p className="text-red-500 text-xs italic">{errors.comments}</p>}
             </div>
-            <button type="submit" className="bg-[#0231A8] w-48 p-2 rounded-full self-center text-white header-button hidden md:block px-6 py-2.5 font-semibold text-center">
+            <button type="submit" className="bg-[#0231A8] w-48 p-2 rounded-lg self-center text-white header-button hidden md:block px-6 py-2.5 font-semibold text-center">
               Submit
             </button>
           </form>
