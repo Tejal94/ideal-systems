@@ -14,13 +14,13 @@ const PlantsDataComp = () => {
   }, []);
 
   return (
-    <div className="w-full px-2 md:px-2 lg:px-28 mt-16">
+    <div className="w-full px-4 md:px-2 lg:px-28 mt-16">
       <section className="" data-aos="fade-right"
                   data-aos-duration="2000">
-        <p className="font-bold text-3xl 2xl:text-4xl uppercase underline underline-offset-8 text-[#222222] mb-16">
+        <p className="font-bold text-center md:text-left leading-10 text-3xl 2xl:text-4xl uppercase underline underline-offset-8 text-[#222222] mb-16">
           Effluent Treatment Plant
         </p>
-        <span className="font-normal text-xl 2xl:text-[22px] text-justify leading-7 capitalize">
+        <span className="font-normal text-xl 2xl:text-[22px] text-justify leading-7">
           Our Effluent Treatment Plants (ETP) are designed to treat different
           types of wastewater by using advanced processes to remove organic and
           inorganic contaminants, oils, grease, heavy metals, and suspended
@@ -28,7 +28,7 @@ const PlantsDataComp = () => {
           characteristics of the wastewater to meet government regulations and
           ensure the treated water meets permissible limits.
         </span>
-        <p className="font-normal text-xl 2xl:text-[22px] text-justify mt-8 leading-7 capitalize">
+        <p className="font-normal text-xl 2xl:text-[22px] text-justify mt-8 leading-7">
           With more than twelve years of experience, we're pioneers in our
           field. We're constantly seeking the latest, most cost-effective
           technologies to meet society's needs effortlessly.
@@ -40,23 +40,23 @@ const PlantsDataComp = () => {
       </p>
       <main className="px-2 md:px-16 lg:px-20 2xl:px-60 2xl:mt-12" >
         <Tabs defaultValue="The Process">
-          <TabsList className="h-16 w-full justify-between mb-12">
+          <TabsList className="h-24 md:h-16 w-full justify-between mb-12">
             <TabsTrigger
-              className="disabled:opacity-100 2xl:text-[22px] disabled:data-[state=active]:bg-[#E4F5FF] text-black w-1/3 py-2 disabled:data-[state=active]:text-primary-500"
+              className="disabled:opacity-100 h-[100%] text-wrap lg:text-[16px] 2xl:text-[22px] disabled:data-[state=active]:bg-[#E4F5FF] text-black w-1/3 py-2 disabled:data-[state=active]:text-primary-500"
               value="The Process"
             >
               Containerided ETP
             </TabsTrigger>
 
             <TabsTrigger
-              className="disabled:opacity-100 2xl:text-[22px] disabled:data-[state=active]:border-b-primary-500 text-black w-1/3 py-2 disabled:data-[state=active]:text-primary-500"
+              className="disabled:opacity-100 h-[100%] text-wrap lg:text-[16px] 2xl:text-[22px] disabled:data-[state=active]:border-b-primary-500 text-black w-1/3 py-2 disabled:data-[state=active]:text-primary-500"
               value="Features"
             >
               Zero liquid dischrge treatment plant
             </TabsTrigger>
 
             <TabsTrigger
-              className="disabled:opacity-100 2xl:text-[22px] disabled:data-[state=active]:border-b-primary-500 text-black w-1/3 py-2 disabled:data-[state=active]:text-primary-500"
+              className="disabled:opacity-100 h-[100%] text-wrap lg:text-[16px] 2xl:text-[22px] disabled:data-[state=active]:border-b-primary-500 text-black w-1/3 py-2 disabled:data-[state=active]:text-primary-500"
               value="Application"
             >
               Grey water treatment plan
@@ -64,7 +64,7 @@ const PlantsDataComp = () => {
           </TabsList>
 
           <TabsContent className="relative flex flex-col " value="The Process">
-            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg 2xl:text-[20px] py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg 2xl:text-[20px] py-10 grid grid-cols-1 md:grid-cols-2 md:gap-10">
               <ul className="list-disc list-outside pl-5">
                 <li>
                   Technology : Physical / Chemical / Biological / UlFiltration
@@ -88,8 +88,8 @@ const PlantsDataComp = () => {
                 </li>
               </ul>
             </div>
-            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex justify-end">
-              <button onClick={() => setShowForm(true)}  className="bg-[#0231A8] w-48 p-2 rounded-full self-center text-white header-button px-6 py-2.5 font-semibold text-center">
+            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex justify-center md:justify-end">
+              <button onClick={() => setShowForm(true)}  className="bg-[#0231A8] w-48 p-2 rounded-lg self-center text-white header-button px-6 py-2.5 font-semibold text-center">
                 Get a Quote
               </button>
             </div>
@@ -98,7 +98,7 @@ const PlantsDataComp = () => {
             className="flex flex-col scrollbar-thin scrollbar-thumb-gray-200 scrollbar-thumb-rounded-lg"
             value="Features"
           >
-            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg 2xl:text-[20px] py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg 2xl:text-[20px] py-10 grid grid-cols-1 md:grid-cols-2 md:gap-10">
               <ul className="list-disc list-outside pl-5">
                 <li>
                   Technology : Physical / Chemical / Advance Filtration / MEE
@@ -131,8 +131,8 @@ const PlantsDataComp = () => {
                 </li>
               </ul>
             </div>
-            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex justify-end">
-              <button onClick={() => setShowForm(true)}  className="bg-[#0231A8] w-48 p-2 rounded-full self-center text-white header-button px-6 py-2.5 font-semibold text-center">
+            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex  justify-center md:justify-end">
+              <button onClick={() => setShowForm(true)}  className="bg-[#0231A8] w-48 p-2 rounded-lg self-center text-white header-button px-6 py-2.5 font-semibold text-center">
                 Get a Quote
               </button>
             </div>
@@ -141,7 +141,7 @@ const PlantsDataComp = () => {
             className="flex flex-col scrollbar-thin scrollbar-thumb-gray-200 scrollbar-thumb-rounded-lg"
             value="Application"
           >
-            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg 2xl:text-[20px] py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg 2xl:text-[20px] py-10 grid grid-cols-1 md:grid-cols-2 md:gap-10">
               <ul className="list-disc list-outside pl-5">
                 <li>
                   Technology : Physical / Chemical / Biological / UlFiltration
@@ -164,8 +164,8 @@ const PlantsDataComp = () => {
                 </li>
               </ul>
             </div>
-            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex justify-end">
-              <button onClick={() => setShowForm(true)}  className="bg-[#0231A8] w-48 p-2 rounded-full self-center text-white header-button px-6 py-2.5 font-semibold text-center">
+            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex justify-center md:justify-end">
+              <button onClick={() => setShowForm(true)}  className="bg-[#0231A8] w-48 p-2 rounded-lg self-center text-white header-button px-6 py-2.5 font-semibold text-center">
                 Get a Quote
               </button>
             </div>
@@ -173,7 +173,7 @@ const PlantsDataComp = () => {
         </Tabs>
       </main>
 
-      <p className="font-bold text-3xl 2xl:text-4xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10" data-aos="fade-right"
+      <p className="font-bold text-center md:text-left text-3xl 2xl:text-4xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10" data-aos="fade-right"
                   data-aos-duration="2000">
         Benefits
       </p>

@@ -13,17 +13,11 @@ const ClientGrid2 = () => {
                 scroller.setAttribute("data-animated", true);
 
                 const scrollerInner = scroller.querySelector(".scroll_in");
-                // const scrollerContent = Array.from(scrollerInner.children);
 
                 const contentWidth = scrollerInner.scrollWidth;
                 const animationDuration = contentWidth / 150; // Adjust the divisor as needed
                 scroller.style.setProperty('--_animation-duration', `${animationDuration}s`);
 
-                // scrollerContent.forEach((item) => {
-                //     const duplicatedItem = item.cloneNode(true);
-                //     duplicatedItem.setAttribute("aria-hidden", true);
-                //     scrollerInner.appendChild(duplicatedItem);
-                // });
             });
         };
 
@@ -62,12 +56,10 @@ const ClientGrid2 = () => {
                     <div key={index} className="w-52 h-40 md:w-72 md:h-60 pt-2 md:pt-2 mx-4 rounded-xl flex-shrink-0 shadow-md shadow-[rgba(2, 49, 168, 0.15)] items-center justify-center bg-white">
                         
                         <div className="h-full scale-75 md:scale-100 flex items-center justify-center">
-            
                              <img src={img} />
                         </div>
                     </div>
                     ))}
-                
                 </div>
             </div>
 
@@ -84,12 +76,8 @@ const ClientGrid2 = () => {
                         </div>
                     </div>
                     ))}
-                
                 </div>
             </div>
-
-
-
         </div>
     )
 }

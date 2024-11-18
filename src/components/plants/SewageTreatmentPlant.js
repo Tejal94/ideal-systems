@@ -29,12 +29,12 @@ const SewageTreatmentPlant = () => {
   }, []);
 
   return (
-    <div className="w-full px-2 md:px-2 lg:px-28 2xl:px-36 mt-16">
+    <div className="w-full px-4 md:px-2 lg:px-28 2xl:px-36 mt-16">
       <section className="" data-aos="fade-right" data-aos-duration="2000">
         <p className="font-bold text-2xl md:text-3xl 2xl:text-4xl uppercase underline underline-offset-8 text-[#222222] mb-16">
           Sewage treatment plant
         </p>
-        <span className="font-normal text-xl 2xl:text-[22px] text-justify leading-7 capitalize">
+        <span className="font-normal text-xl 2xl:text-[22px] text-justify leading-7">
           These are facilities designed to treat sewage and wastewater from
           residential, commercial, and industrial sources before it is released
           back into the environment or reused. STPs use a combination of
@@ -43,7 +43,7 @@ const SewageTreatmentPlant = () => {
           treated water can be discharged into water bodies or reused for
           purposes like irrigation or industrial processes.{" "}
         </span>
-        <p className="font-normal text-xl text-justify 2xl:text-[22px] mt-8 leading-7 capitalize">
+        <p className="font-normal text-xl text-justify 2xl:text-[22px] mt-8 leading-7">
           With more than twelve years of experience, we're pioneers in our
           field. We're constantly seeking the latest, most cost-effective
           technologies to meet society's needs effortlessly.
@@ -62,36 +62,36 @@ const SewageTreatmentPlant = () => {
         <Tabs defaultValue="The Process">
           <TabsList className="h-24 md:h-16 w-full justify-between items-center mb-12">
             <TabsTrigger
-              className="disabled:opacity-100 h-[100%] 2xl:text-[22px] disabled:data-[state=active]:bg-[#E4F5FF] text-black w-1/4 text-wrap md:text-nowrap py-2 disabled:data-[state=active]:text-primary-500"
+              className="disabled:opacity-100 h-[100%] lg:text-[16px] 2xl:text-[22px] disabled:data-[state=active]:bg-[#E4F5FF] text-black w-1/4 text-wrap md:text-nowrap py-2 disabled:data-[state=active]:text-primary-500"
               value="The Process"
             >
               Containerized STP
             </TabsTrigger>
 
             <TabsTrigger
-              className="disabled:opacity-100 h-[100%] 2xl:text-[20px] disabled:data-[state=active]:border-b-primary-500 text-black w-1/4 text-wrap md:text-nowrap  py-2 disabled:data-[state=active]:text-primary-500"
+              className="disabled:opacity-100 h-[100%] lg:text-[16px] 2xl:text-[20px] disabled:data-[state=active]:border-b-primary-500 text-black w-1/4 text-wrap md:text-nowrap  py-2 disabled:data-[state=active]:text-primary-500"
               value="Features"
             >
               Prefabricated STP
             </TabsTrigger>
 
             <TabsTrigger
-              className="disabled:opacity-100 h-[100%] 2xl:text-[20px] disabled:data-[state=active]:border-b-primary-500 text-black w-1/4 text-wrap md:text-nowrap  py-2 disabled:data-[state=active]:text-primary-500"
+              className="disabled:opacity-100 h-[100%] lg:text-[16px] 2xl:text-[20px] disabled:data-[state=active]:border-b-primary-500 text-black w-1/4 text-wrap md:text-nowrap  py-2 disabled:data-[state=active]:text-primary-500"
               value="Application"
             >
               Civil STP
             </TabsTrigger>
 
             <TabsTrigger
-              className="disabled:opacity-100 h-[100%] 2xl:text-[20px] disabled:data-[state=active]:border-b-primary-500 text-black w-1/4 text-wrap md:text-nowrap  py-2 disabled:data-[state=active]:text-primary-500"
+              className="disabled:opacity-100 h-[100%] lg:text-[16px] 2xl:text-[20px] disabled:data-[state=active]:border-b-primary-500 text-black w-1/4 text-wrap md:text-nowrap  py-2 disabled:data-[state=active]:text-primary-500"
               value="Package"
             >
-              Packege STP
+              Package STP
             </TabsTrigger>
           </TabsList>
 
           <TabsContent className="relative flex flex-col " value="The Process">
-            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg 2xl:text-[22px] py-10 ">
+            <div className="w-full h-auto px-3 sm:px-10 md:px-16 text-lg 2xl:text-[22px] py-10 ">
               <p>
                 Containerized sewage treatment plants are essentially standard
                 shipping containers that have been modified to house a complete
@@ -102,10 +102,10 @@ const SewageTreatmentPlant = () => {
                 disaster relief operations.
               </p>
             </div>
-            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex justify-end">
+            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex justify-center md:justify-end">
               <button
                 onClick={() => setShowForm(true)}
-                className="bg-[#0231A8] w-48 p-2 rounded-full self-center text-white header-button px-6 py-2.5 font-semibold text-center"
+                className="bg-[#0231A8] w-48 p-2 rounded-lg self-center text-white header-button px-6 py-2.5 font-semibold text-center"
               >
                 Get a Quote
               </button>
@@ -115,7 +115,7 @@ const SewageTreatmentPlant = () => {
             className="flex flex-col scrollbar-thin scrollbar-thumb-gray-200 scrollbar-thumb-rounded-lg"
             value="Features"
           >
-            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg 2xl:text-[22px] py-10">
+            <div className="w-full h-auto px-3 sm:px-10 md:px-16 text-lg 2xl:text-[22px] py-10">
               <p>
                 Prefabricated sewage treatment plants, also known as modular or
                 package plants, are built off-site in a controlled environment
@@ -123,10 +123,10 @@ const SewageTreatmentPlant = () => {
                 offers several advantages over traditional on-site construction
               </p>
             </div>
-            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex justify-end">
+            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex justify-center md:justify-end">
               <button
                 onClick={() => setShowForm(true)}
-                className="bg-[#0231A8] w-48 p-2 rounded-full self-center text-white header-button px-6 py-2.5 font-semibold text-center"
+                className="bg-[#0231A8] w-48 p-2 rounded-lg self-center text-white header-button px-6 py-2.5 font-semibold text-center"
               >
                 Get a Quote
               </button>
@@ -136,7 +136,7 @@ const SewageTreatmentPlant = () => {
             className="flex flex-col scrollbar-thin scrollbar-thumb-gray-200 scrollbar-thumb-rounded-lg"
             value="Application"
           >
-            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg 2xl:text-[22px] py-10">
+            <div className="w-full h-auto px-3 sm:px-10 md:px-16 text-lg 2xl:text-[22px] py-10">
               <p>
                 Civil sewage treatment plants (STPs) refer to sewage treatment
                 systems that are primarily constructed using civil engineering
@@ -146,10 +146,10 @@ const SewageTreatmentPlant = () => {
                 back into the environment.
               </p>
             </div>
-            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex justify-end">
+            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex justify-center md:justify-end">
               <button
                 onClick={() => setShowForm(true)}
-                className="bg-[#0231A8] w-48 p-2 rounded-full self-center text-white header-button px-6 py-2.5 font-semibold text-center"
+                className="bg-[#0231A8] w-48 p-2 rounded-lg self-center text-white header-button px-6 py-2.5 font-semibold text-center"
               >
                 Get a Quote
               </button>
@@ -159,7 +159,7 @@ const SewageTreatmentPlant = () => {
             className="flex flex-col scrollbar-thin scrollbar-thumb-gray-200 scrollbar-thumb-rounded-lg"
             value="Package"
           >
-            <div className="w-full h-auto px-2 sm:px-10 md:px-16 text-lg 2xl:text-[22px] py-10">
+            <div className="w-full h-auto px-3 sm:px-10 md:px-16 text-lg 2xl:text-[22px] py-10">
               <p>
                 A packaged sewage treatment plant (STP) is a compact,
                 pre-engineered system used for the treatment of sewage and
@@ -168,10 +168,10 @@ const SewageTreatmentPlant = () => {
                 the site ready for installation.{" "}
               </p>
             </div>
-            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex justify-end">
+            <div className="w-full px-2 sm:px-10 md:px-16 pb-8 flex justify-center md:justify-end">
               <button
                 onClick={() => setShowForm(true)}
-                className="bg-[#0231A8] w-48 p-2 rounded-full self-center text-white header-button px-6 py-2.5 font-semibold text-center"
+                className="bg-[#0231A8] w-48 p-2 rounded-lg self-center text-white header-button px-6 py-2.5 font-semibold text-center"
               >
                 Get a Quote
               </button>
@@ -185,7 +185,7 @@ const SewageTreatmentPlant = () => {
           <p
             data-aos="fade-right"
             data-aos-duration="2000"
-            className="font-bold text-3xl 2xl:text-4xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10"
+            className="font-bold text-center md:text-left  text-3xl 2xl:text-4xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10"
           >
             Gallery
           </p>
@@ -222,7 +222,7 @@ const SewageTreatmentPlant = () => {
           data-aos="fade-right"
           data-aos-duration="2000"
         >
-          <p className="font-bold text-3xl 2xl:text-4xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10">
+          <p className="font-bold text-center md:text-left text-3xl 2xl:text-4xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10">
             Benefits
           </p>
           <ul className="list-disc list-outside pl-5 text-xl md:text-2xl font-normal">
@@ -244,7 +244,7 @@ const SewageTreatmentPlant = () => {
       <p
         data-aos="fade-right"
         data-aos-duration="2000"
-        className="font-bold text-2xl md:text-3xl text-center md:text-left 2xl:text-4xl uppercase underline mt-10 md:mt-16 underline-offset-8 text-[#222222] mb-16"
+        className="font-bold text-3xl text-center md:text-left 2xl:text-4xl uppercase underline mt-10 md:mt-16 underline-offset-8 text-[#222222] mb-16"
       >
         Variants
       </p>
