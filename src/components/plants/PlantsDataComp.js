@@ -1,10 +1,23 @@
 import React, { useState , useEffect} from "react";
-import { plantsData } from "../../Constants";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tab";
 import ModalForm from "../../components/ModalForm";
 import { Dialog, DialogContent } from "../ui/dialog";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ETPO1 from "../../assets/plants/etpo10.webp";
+import ETPO2 from "../../assets/plants/etpo11.webp";
+import ETP10 from "../../assets/plants/ETP10.webp";
+import ETP11 from "../../assets/plants/ETP11.webp";
+import ETP12 from "../../assets/plants/ETP12.webp";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/autoplay";
+import "swiper/css";
+import "swiper";
+import "swiper/css/navigation";
+import "swiper/swiper-bundle.css";
+import "swiper/react";
+import { Autoplay } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 const PlantsDataComp = () => {
   const [showForm, setShowForm] = useState(false);
@@ -173,7 +186,47 @@ const PlantsDataComp = () => {
         </Tabs>
       </main>
 
-      <p className="font-bold text-center md:text-left text-3xl 2xl:text-4xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10" data-aos="fade-right"
+      <div className="flex flex-col sm:flex-row p-2 md:p-0 2xl:mt-5">
+
+      <section className="w-full md:w-1/2">
+          <p data-aos="fade-right"
+                  data-aos-duration="2000" className="font-bold text-center md:text-left text-3xl 2xl:text-4xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10">
+            Gallery
+          </p>
+
+          <div className="w-full">
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              spaceBetween={0}
+              slidesPerView={1}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+                reverseDirection: false,
+              }}
+              loop={true}
+            >
+              <SwiperSlide className="rounded-lg ">
+                <img src={ETPO1} className="" />
+              </SwiperSlide>
+              <SwiperSlide className="rounded-lg w-[100px] max-h-[90px] md:w-[200px] md:min-h-[180px]">
+                <img src={ETPO2} className="" />
+              </SwiperSlide>
+              <SwiperSlide className="rounded-lg w-[100px] max-h-[90px] md:w-[200px] md:min-h-[180px]">
+                <img src={ETP10} className="" />
+              </SwiperSlide>
+              <SwiperSlide className="rounded-lg w-[100px] max-h-[90px] md:w-[200px] md:min-h-[180px]">
+                <img src={ETP11} className="" />
+              </SwiperSlide>
+              <SwiperSlide className="rounded-lg w-[100px] max-h-[90px] md:w-[200px] md:min-h-[180px]">
+                <img src={ETP12} className="" />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </section>
+        <section className="w-full md:w-1/2 md:pl-16" data-aos="fade-right"
+                  data-aos-duration="2000">
+                     <p className="font-bold text-center md:text-left text-3xl 2xl:text-4xl uppercase underline mt-16 underline-offset-8 text-[#222222] mb-10" data-aos="fade-right"
                   data-aos-duration="2000">
         Benefits
       </p>
@@ -190,6 +243,8 @@ const PlantsDataComp = () => {
         <li>Environmentally Friendly </li>
         <li>Cost Savings</li>
       </ul>
+        </section>
+      </div>
 
       {/* Add Form Dialog */}
       <Dialog open={showForm} onOpenChange={setShowForm}>

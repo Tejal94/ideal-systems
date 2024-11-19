@@ -16,6 +16,7 @@ import Accreditation7 from "../assets/accreditation/acc7.svg"
 import Accreditation8 from "../assets/accreditation/acc8.svg"
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
 
 const About = () => {
 
@@ -25,6 +26,13 @@ const About = () => {
 
   return (
     <div>
+       <Helmet>
+        <link rel="icon" type="image/svg" href="/logo.svg" />
+        <title>About | Ideal Systems & Services</title>
+        <meta name="description" content={`About page with company information, owner, accrediations, certifications`} />
+        <meta name="keywords" content={`owner, accrediations, certifications, information`} />
+        <link rel="canonical" href={`https://ideal-systems.vercel.app/about`} />
+      </Helmet>
       <Navbar />
       {/* Hero Banner */}
       <section class="bg-[url('./assets/banner/banner-aboutus.svg')] h-[438px] w-full bg-cover bg-center p-10" >

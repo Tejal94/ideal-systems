@@ -140,18 +140,18 @@ export const ourCustomersImagesTwo = [
 ];
 
 export const ourProductsImages = [
-  Product1,
-  Product2,
-  Product3,
-  Product4,
-  Product5,
-  Product6,
-  Product7,
-  Product8,
-  Product9,
-  Product10,
-  Product11,
-  Product12
+  {image: Product1, title: "Dynamix Group", location: "Goa", plant: "STP", yr: "2015", capacity: "150+150KLD" },
+  {image: Product2, title: "Adhiraj Builders & Developers", location: "Manchar, Pune", plant: "GWTP", yr: "2016", capacity: "10 KLD" },
+  {image: Product3, title: "Sulaxmi Aqua", location: "Uruli Kanchan, Pune", plant: "RO Plant", yr: "2016", capacity: "500 LPH" },
+  {image: Product4, title: "Manmad Railway Station", location: "Manmad", plant: "STP (Civil)", yr: "2017", capacity: "500 KLD" },
+  {image: Product5, title: "Khandve Niravana", location: "Lohegaon, Pune", plant: "STP", yr: "2016", capacity: "40 KLD" },
+  {image: Product6, title: "Kalpataru Developers (KPT)", location: "Manjari", plant: "STP", yr: "2017", capacity: "750 KLD"},
+  {image: Product7, title: "Saffier food Pvt Ltd (KFC)", location: "Mumbai", plant: "RO", yr: "2017", capacity: "500 LPH"},
+  {image: Product8, title: "Springs Woods", location: "Hinjewadi,Pune", plant: "Civil – STP ", yr: "2018", capacity: "500 KLD"},
+  {image: Product9, title: "Happy Home Realty", location: "Wagholi pune", plant: "STP ", yr: "2018", capacity: "65 KLD"},
+  {image: Product10, title: "The Royal Group", location: "Khopoli", plant: "STP ", yr: "2019", capacity: "200 KLD"},
+  {image: Product11, title: "Avnee Landmarks", location: "Pune", plant: "STP ", yr: "2019", capacity: "12 KLD"},
+  {image: Product12, title: "Rajdeep Buildcon", location: "Kochi, Kerala", plant: "STP ", yr: "2019", capacity: "120 KLD"},
 ];
 
 

@@ -4,10 +4,18 @@ import Footer from "../components/Footer";
 import MapImage from "../assets/clients-map.jpg"
 import ClientGrid2 from "../components/ClientGrid2";
 import ClientsList from "../assets/ClientsList.pdf";
+import { Helmet } from "react-helmet";
 
 const Clients = () => {
   return (
     <div>
+      <Helmet>
+        <link rel="icon" type="image/svg" href="/logo.svg" />
+        <title>Clients | Ideal Systems & Services</title>
+        <meta name="description" content={`Clients page with projects and clients information, testimonials, feedbacks, ratings`} />
+        <meta name="keywords" content={`clients information, testimonials, feedbacks, ratings`} />
+        <link rel="canonical" href={`https://ideal-systems.vercel.app/clients`} />
+      </Helmet>
       <Navbar />
       {/* Hero Banner */}
       <section class="bg-[url('./assets/banner/ClientsMobile.svg')] sm:bg-[url('./assets/banner/banner-clients.svg')] h-[438px] w-full bg-cover bg-center p-10">

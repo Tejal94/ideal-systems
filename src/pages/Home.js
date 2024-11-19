@@ -13,6 +13,7 @@ import { Dialog, DialogContent } from  "../components/ui/dialog";
 import ModalForm from "../components/ModalForm";
 import Testimonials from "../components/Testimonials";
 import HeroCarousel from "../components/HeroCarousel";
+import { Helmet } from "react-helmet";
 
 const responsive = {
   desktop: {
@@ -41,6 +42,13 @@ const Home = () => {
 
   return (
     <div>
+      <Helmet>
+        <link rel="icon" type="image/svg" href="/logo.svg" />
+        <title>Home | Ideal Systems & Services</title>
+        <meta name="description" content={`Home page with clients and services listings`} />
+        <meta name="keywords" content={`water, water treatment, plants, systems, clients`} />
+        <link rel="canonical" href={`https://ideal-systems.vercel.app/`} />
+      </Helmet>
       <Navbar />
       {/* Hero Banner */}
       <HeroCarousel/>

@@ -2,10 +2,18 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
+import { Helmet } from "react-helmet";
 
 const Contacts = () => {
   return (
     <div>
+       <Helmet>
+        <link rel="icon" type="image/svg" href="/logo.svg" />
+        <title>Contact Us | Ideal Systems & Services</title>
+        <meta name="description" content={`Contact us page with contact information, location, address , details about office`} />
+        <meta name="keywords" content={`contact, phone number, telephone, map, information, location, address , details about office`} />
+        <link rel="canonical" href={`https://ideal-systems.vercel.app/contact`} />
+      </Helmet>
       <Navbar />
       {/* Hero Banner */}
       <section class="bg-[url('./assets/banner/ContactMobile.svg')] sm:bg-[url('./assets/banner/banner-contact.svg')] h-[403px] w-full bg-center p-10">
